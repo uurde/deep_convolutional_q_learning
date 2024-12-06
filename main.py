@@ -52,3 +52,8 @@ number_actions = env.action_space.n
 print('state shapes: ', state_shape)
 print('state size: ', state_size)
 print('number of actions: ', number_actions)
+
+#initializing the hyperparameters
+learning_rate = 5e-4
+minibatch_size = 64
+discount_factor = 0.99
