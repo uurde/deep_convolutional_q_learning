@@ -40,3 +40,15 @@ class Network(nn.Module):
         x = F.relu(self.full_connection1(x))
         x = F.relu(self.full_connection2(x))
         return self.full_connection3(x)
+    
+#setting up the enviroment
+import ale_py
+import gymnasium as gym
+
+env = gym.make('MsPacmanDeterministic-v0', full_action_space = False)
+state_shape = env.observation_space.shape
+state_size = env.observation_space.shape[0]
+number_actions = env.action_space.n
+print('state shapes: ', state_shape)
+print('state size: ', state_size)
+print('number of actions: ', number_actions)
